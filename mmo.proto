@@ -1,0 +1,16 @@
+// https://grpc.io/docs/languages/python/basics/
+
+syntax = "proto3";
+
+message Zone {
+    string name = 1;
+}
+
+message Point {
+    int32 latitude = 1;
+    int32 longitude = 2;
+}
+
+service MMOService {
+    rpc GetZone(Point) returns (Zone) {}
+}
